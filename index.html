@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>為牠發聲 - 流浪動物關懷專題</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 進入區塊 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>為牠發聲!!</h1>
+            <p class="subtitle">關注台灣流浪動物問題</p>
+            <div class="scroll-indicator">向下滾動探索更多</div>
+        </div>
+    </section>
+
+    <!-- 簡介區塊 -->
+    <section class="intro">
+        <div class="container">
+            <h2>關於流浪動物</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>15萬+</h3>
+                    <p>全台流浪動物數量</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30%</h3>
+                    <p>每年成長率</p>
+                </div>
+                <div class="stat-item">
+                    <h3>2萬</h3>
+                    <p>年度送養數量</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 互動測驗區塊 -->
+    <section class="interactive-story">
+        <div class="container">
+            <h2>小黑的故事</h2>
+            
+            <!-- 故事區塊 -->
+            <div class="story-block" id="block1">
+                <div class="story-content">
+                    <p>小黑被主人拋棄在山中，他到處找食物，找到一處農莊，裡面有養雞...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block2a')">攻擊雞</button>
+                        <button onclick="showBlock('block2b')">在門口等農莊主人</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block2a">
+                <div class="story-content">
+                    <p>雞發出的叫聲驚動了農莊內的人，打電話給動保處...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block4')">不逃走</button>
+                        <button onclick="showBlock('block3')">逃走</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block2b">
+                <div class="story-content">
+                    <p>農莊主人出來看到狗，打電話給動保處...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block4')">不逃走</button>
+                        <button onclick="showBlock('block3')">逃走</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block3">
+                <div class="story-content">
+                    <p>小黑挨餓，最後生病死掉了。</p>
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block4">
+                <div class="story-content">
+                    <p>小黑被動保處抓走，在動物收容所裡終老。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .interactive-story {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .story-block {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: var(--cornsilk);
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .story-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .choice-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .choice-buttons button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: var(--earth-yellow);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .choice-buttons button:hover {
+            background-color: var(--tigers-eye);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function showBlock(blockId) {
+            // 獲取要顯示的區塊
+            const blockToShow = document.getElementById(blockId);
+
+            // 如果區塊已經顯示過，則複製一份並添加到頁面底部
+            if (!blockToShow.classList.contains('hidden')) {
+                const clone = blockToShow.cloneNode(true);
+                clone.id = blockId + '-clone-' + Date.now(); // 確保ID唯一
+                document.querySelector('.interactive-story .container').appendChild(clone);
+                scrollToBlock(clone);
+            } else {
+                // 顯示選擇區塊
+                blockToShow.classList.remove('hidden');
+                scrollToBlock(blockToShow);
+            }
+        }
+
+        function scrollToBlock(block) {
+            // 計算區塊應該滾動到的位置
+            const offset = window.innerHeight * 0.1;
+            const blockPosition = block.getBoundingClientRect().top + window.scrollY - offset;
+
+            // 滑順滾動到指定位置
+            window.scrollTo({
+                top: blockPosition,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <!-- 衝突議題視覺呈現 -->
+    <section class="issues">
+        <div class="container">
+            <h2>當前困境</h2>
+            <div class="issue-cards">
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/300x200" alt="收容所空間不足">
+                        </div>
+                        <div class="card-back">
+                            <h3>收容所超收</h3>
+                            <p>公立收容所面臨空間不足問題</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/300x200" alt="棄養問題">
+                        </div>
+                        <div class="card-back">
+                            <h3>任意棄養</h3>
+                            <p>寵物棄養情況持續攀升</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/300x200" alt="資源不足">
+                        </div>
+                        <div class="card-back">
+                            <h3>資源不足</h3>
+                            <p>醫療及照護資源嚴重缺乏</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA區塊 -->
+    <section class="cta">
+        <div class="container">
+            <h2>一起行動</h2>
+            <p>每一生命都值得被善待</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn primary">認養資訊</a>
+                <a href="#" class="btn secondary">捐款支持</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 

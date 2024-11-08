@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-moss-green: #606c38ff;
+    --pakistan-green: #283618ff;
+    --cornsilk: #fefae0ff;
+    --earth-yellow: #dda15eff;
+    --tigers-eye: #bc6c25ff;
+}
+
+body {
+    font-family: "微軟正黑體", sans-serif;
+    line-height: 1.6;
+    background-color: var(--cornsilk);
+    color: var(--pakistan-green);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 進入區塊樣式 */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--cornsilk);
+    background-color: var(--pakistan-green);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+/* 簡介區塊樣式 */
+.intro {
+    padding: 80px 0;
+    background-color: var(--cornsilk);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 2px solid var(--dark-moss-green);
+}
+
+.stat-item h3 {
+    color: var(--tigers-eye);
+}
+
+/* 議區塊樣式 */
+.issues {
+    padding: 80px 0;
+}
+
+.issue-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-back {
+    background: var(--dark-moss-green);
+    color: var(--cornsilk);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-back h3 {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.card-back p {
+    width: 100%;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    padding: 20px;
+}
+
+.card-front {
+    border: 2px solid var(--dark-moss-green);
+}
+
+/* CTA區塊樣式 */
+.cta {
+    padding: 80px 0;
+    background-color: var(--pakistan-green);
+    color: var(--cornsilk);
+    text-align: center;
+}
+
+.cta-buttons {
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background-color: var(--tigers-eye);
+    color: var(--cornsilk);
+    border: none;
+}
+
+.btn.primary:hover {
+    background-color: var(--earth-yellow);
+}
+
+.btn.secondary {
+    border: 2px solid var(--earth-yellow);
+    color: var(--cornsilk);
+}
+
+.btn.secondary:hover {
+    background-color: var(--earth-yellow);
+    border-color: var(--earth-yellow);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .stats-grid,
+    .issue-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* 標題樣式 */
+h2 {
+    color: var(--pakistan-green);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--tigers-eye);
+}
+
+.cta h2::after {
+    background-color: var(--earth-yellow);
+} 
