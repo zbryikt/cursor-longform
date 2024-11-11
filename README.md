@@ -1,5 +1,7 @@
 # 流浪動物數位專題 / 使用 Cursor + ChatGPT生成
 
+DEMO: [https://zbryikt.github.io/course-longform](https://zbryikt.github.io/course-longform])
+
 ## 專案簡介
 
 這是一個針對新聞傳播相關科系學生的數位專題生成實驗。本專案以流浪動物議題為例，展示如何使用 Cursor 建立基礎網頁互動式數位專題。
