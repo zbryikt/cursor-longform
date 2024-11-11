@@ -1,4 +1,4 @@
-# 流浪動物數位專題 / 使用 Cursor 生成
+# 流浪動物數位專題 / 使用 Cursor + ChatGPT生成
 
 ## 專案簡介
 
@@ -24,12 +24,11 @@
    - 清晰的視覺層次
 
 3. **議題內容**
-   - (預計將)搭配自動生成準備內容
+   - 使用 ChatGPT 生成故事架構
+   - 使用 ChatGPT 生成圖片
 
 
-## 技術規格
+## 參考資料
 
-- HTML5
-- CSS3
-- JavaScript（基礎互動功能）
-- 無後端資料庫
+ - 故事架構討論與生成: https://chatgpt.com/share/67318717-9638-800c-9dfb-da6c6dcc47a6
+ - 圖片生成交談: https://chatgpt.com/share/673186e3-3d04-800c-8737-4fa650bafbc6
