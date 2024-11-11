@@ -10,9 +10,14 @@
     <!-- 進入區塊 -->
     <section class="hero">
         <div class="hero-content">
-            <h1>為牠發聲!!</h1>
-            <p class="subtitle">關注台灣流浪動物問題</p>
-            <div class="scroll-indicator">向下滾動探索更多</div>
+            <div class="title-box">
+                <h1>為「牠」發聲!!</h1>
+                <p class="subtitle">探討台灣流浪動物問題：從棄養到收容，從社會責任到人與動物的和諧共存</p>
+                <div class="scroll-indicator" onclick="scrollToNextSection()">
+                    向下滾動探索更多
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -20,6 +25,11 @@
     <section class="intro">
         <div class="container">
             <h2>關於流浪動物</h2>
+            <div class="section-intro">
+                <p>流浪動物問題隨著城市化和人口增長愈加明顯，牠們的存在無法完全消同時全面驅逐也違背動物福利的基本原則。流浪動物的存在多源於棄養、不負責的繁殖和動物保護資源不足，使其在社區內無序增長。</p>
+                <p>社會對這些動物的態度不一，部分人同情流浪動物並願意餵養，另一部分人則視之為問題。這樣的分歧讓社區在面對流浪動物時難以達成共識，迫切需要多方協作，共同尋求一種人道而有效的共存模式。</p>
+                <p>根據最新統計，台灣的流浪動物問題正以驚人的速度惡化。目前全台流浪動物數量已突破15萬，且每年仍以30%的速度持續增長。然而，年度送養數量僅有2萬隻，遠遠趕不上流浪動物成長的速度。這樣懸殊的差距，不僅反映出收容資源的不足，更凸顯出目前的處理方式難以應對這個日益嚴重的社會問題。</p>
+            </div>
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>15萬+</h3>
@@ -34,6 +44,9 @@
                     <p>年度送養數量</p>
                 </div>
             </div>
+            <div class="section-outro">
+                <p>在這些冰冷的數字背後，每一個生命都有著自己的故事。接下來，讓我們透過一個虛構但寫實的故事，了解一隻流浪狗可能面臨的處境，以及牠的命運如何被不同的選擇所改變。</p>
+            </div>
         </div>
     </section>
     <!-- 互動測驗區塊 -->
@@ -44,43 +57,257 @@
             <!-- 故事區塊 -->
             <div class="story-block" id="block1">
                 <div class="story-content">
-                    <p>小黑被主人拋棄在山中，他到處找食物，找到一處農莊，裡面有養雞...</p>
+                    <p>小黑原本是一隻家犬，和主人生活在都市的公寓裡。某天，主人帶著他開車到郊區的山路上，停下車後，主人拿出小黑最愛的玩具丟向路邊。當小黑興奮地跑去撿玩具時，身後傳來引擎發動的聲音，等他轉頭時，主人的車已經消失在山路轉角...</p>
+                    <p>獨自在山中遊蕩了三天，飢餓和口渴讓小黑的體力快速下降。在第四天的清晨，他發現了一處農莊，裡面傳來陣陣雞叫聲，還飄來食物的香氣...</p>
                     <div class="choice-buttons">
-                        <button onclick="showBlock('block2a')">攻擊雞</button>
-                        <button onclick="showBlock('block2b')">在門口等農莊主人</button>
+                        <button onclick="showBlock('block2a')">闖入農莊找食物</button>
+                        <button onclick="showBlock('block2b')">在農莊外等待</button>
                     </div>
+                </div>
+                <div class="story-image">
+                    <img src="p1.webp" alt="被遺棄的小黑">
                 </div>
             </div>
 
             <div class="story-block hidden" id="block2a">
                 <div class="story-content">
-                    <p>雞發出的叫聲驚動了農莊內的人，打電話給動保處...</p>
+                    <p>小黑躡手躡腳地溜進農莊，看到雞舍裡的雞正在啄食。飢餓感讓他的狩獵本能甦醒，他悄悄靠近雞舍。就在他準備撲向其中一隻雞時，雞群發現了他的存在，頓時驚慌失措地大聲鳴叫...</p>
+                    <p>農莊裡的人被雞叫聲驚動，紛紛跑出來查看情況。看到小黑後，有人拿起電話打給動保處，說發現一隻危險的流浪狗正在攻擊他們的雞...</p>
                     <div class="choice-buttons">
-                        <button onclick="showBlock('block4')">不逃走</button>
-                        <button onclick="showBlock('block3')">逃走</button>
+                        <button onclick="showBlock('block3a')">躲藏在農莊角落</button>
+                        <button onclick="showBlock('block3b')">立即逃離現場</button>
                     </div>
+                </div>
+                <div class="story-image">
+                    <img src="p2.webp" alt="小黑在農莊">
                 </div>
             </div>
 
             <div class="story-block hidden" id="block2b">
                 <div class="story-content">
-                    <p>農莊主人出來看到狗，打電話給動保處...</p>
+                    <p>小黑選擇在農莊門口安靜地等待。不久後，一位老農夫走出來準備餵雞。看到小黑溫順地坐在門口，老農夫停下腳步，仔細打量這隻看起來有些虛弱的狗...</p>
+                    <p>老農夫看出小黑應該是被遺棄的家犬，但農莊已經養了兩隻狗，實在無法再收留。他嘆口氣，拿出電話打給當地動保處...</p>
                     <div class="choice-buttons">
-                        <button onclick="showBlock('block4')">不逃走</button>
-                        <button onclick="showBlock('block3')">逃走</button>
+                        <button onclick="showBlock('block3c')">繼續待在原地</button>
+                        <button onclick="showBlock('block3d')">轉身離開</button>
                     </div>
                 </div>
-            </div>
-
-            <div class="story-block hidden" id="block3">
-                <div class="story-content">
-                    <p>小黑挨餓，最後生病死掉了。</p>
+                <div class="story-image">
+                    <img src="p6.webp" alt="小黑在農莊門口">
                 </div>
             </div>
 
-            <div class="story-block hidden" id="block4">
+            <div class="story-block hidden" id="block3a">
                 <div class="story-content">
-                    <p>小黑被動保處抓走，在動物收容所裡終老。</p>
+                    <p>小黑躲在農莊的柴房後面，瑟縮著身體。動保人員到達後，仔細搜索了整個農莊。最終，他們在柴房後發現了驚恐的小黑。由於他表現出攻擊性行為，動保人不得不使用捕捉桿...</p>
+                    <p>在收容所裡，小黑因為攻擊事件的紀錄而被標記為較難認養的犬隻。一位經驗豐富的訓練師注意到了他，認為小黑只是因為害怕而出現應激行為...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block4a')">接受訓練師的協助</button>
+                        <button onclick="showBlock('block4b')">抗拒人類的接觸</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p3.webp" alt="小黑在柴房後">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block3b">
+                <div class="story-content">
+                    <p>小黑拔腿就跑，一口氣跑進了更深的山區。接下來的日子裡，他在山中流浪，靠著吃腐肉和垃圾度日。沒有適當的食物和照顧，他的健康狀況每況愈下...</p>
+                    <p>幾個月後，一場嚴重的肺炎奪走了小黑的生命。他孤獨地躺在一處山溝裡，再也沒能等到伸出援手的人...</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p13.webp" alt="小黑在山中流浪">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block3c">
+                <div class="story-content">
+                    <p>小黑選擇信任人類，安靜地等待。農夫看他這麼懂事拿了一些飼料和水給他。不久後，動保處的人員到達，他們發現小黑非常溫馴，而且脖子上還留著項圈的痕跡...</p>
+                    <p>在收容所裡，小黑很快就因為溫順的個性受到工作人員的喜愛。有兩個家庭對他產生了興趣：一個是有經驗的老夫妻，家裡已有兩隻狗；另一個是年輕家庭，雖然沒養過狗，但充滿愛心和耐心...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block4c')">去有經驗的家庭</button>
+                        <button onclick="showBlock('block4d')">去新手家庭</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p7.webp" alt="小黑在收容所等待">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block3d">
+                <div class="story-content">
+                    <p>小黑害怕被抓，選擇離開農莊他在附近的村落間流浪，有時能遇到好心人餵食，但更多時候要靠翻找垃圾維生。漸漸地，他的身體狀況越來越差...</p>
+                    <p>一年後，村民們發現小黑倒在路邊，奄奄一息。雖然趕緊送醫，但因為長期營養和疾病，最終仍無力回天...</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p10.webp" alt="小黑在村落間流浪">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block4a">
+                <div class="story-content">
+                    <p>在訓練師的耐心引導下，小黑慢慢走出了恐懼。透過正向訓練和社會化課程，他學會了信任人類。訓練師發現小黑其實非常聰明，很快就掌握了各種指令。</p>
+                    <p>三個月後，收容所舉辦了一場義賣活動。訓練師建議小黑可以參與示範表演，展他的進步。但小黑仍對陌生人群有些緊張...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block5a')">參加表演活動</button>
+                        <button onclick="showBlock('block5b')">繼續專注訓練</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p4.webp" alt="小黑接受訓練">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block4b">
+                <div class="story-content">
+                    <p>小黑始終無法克服對人類的恐懼，每次有人接近都會躲到籠子角落。收容所的工作人員嘗試了各種方法，但效果都不理想。有人提議將他轉送到鄉間的長期照護中心...</p>
+                    <p>就在這時，一位退休的獸醫來到收容所當志工，她有豐富的問題犬隻復健經驗，想要幫助小黑...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block5c')">接受獸醫的協助</button>
+                        <button onclick="showBlock('block5d')">轉送到長期照護中心</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p16.webp" alt="小黑在角落">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block4c">
+                <div class="story-content">
+                    <p>老夫妻家的兩隻狗都是成年犬，起初對小黑有些排斥。但在主人的耐心調解下，牠們漸漸接納了小黑。老夫妻很有經驗，知道如何讓狗狗們和平相處。</p>
+                    <p>幾個月後，小黑完全融入了新家庭。但老夫妻年紀大了，常常擔心自己是否能繼續照顧好三隻狗...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block5e')">尋求寵物保姆協助</button>
+                        <button onclick="showBlock('block5f')">安排給其他家庭</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p9.webp" alt="小黑在新家">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block4d">
+                <div class="story-content">
+                    <p>年輕家庭雖然沒有養狗經驗，但很認真學習。他們參加了寵物課程，買了許多書籍，還加入了狗主人社群。小黑是他們的第一隻狗，他們對待小黑就像對待家人一樣。</p>
+                    <p>然而，他們即將迎來第一個孩子。有人開始擔心小黑會適應不了家庭的變化...</p>
+                    <div class="choice-buttons">
+                        <button onclick="showBlock('block5g')">提前做好準備工作</button>
+                        <button onclick="showBlock('block5h')">考慮送回收容所</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p11.webp" alt="小黑與新家庭">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block5a">
+                <div class="story-content">
+                    <p>在表演活動中，小黑克服了緊張，完美展現了訓練成果。他的表現吸引了一位警犬訓練師的注意，認為小黑有成為工作犬的潛力。</p>
+                    <p>經過評估後，小黑加入了搜救犬訓練計畫。兩年後，他成為了一名優秀的搜救犬，幫助了許多人，也找到了自己的人生價值。但，又有多少狗狗能像小黑一樣好運呢？</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p5.webp" alt="小黑成為搜救犬">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block5b">
+                <div class="story-content">
+                    <p>小黑繼續專注於訓練，漸漸建立起自信。訓練師決定收養他，讓他成為訓練中心的示範犬，幫助其他有類似經歷的狗狗重建信心。</p>
+                    <p>現在的小黑不僅克服了自己的恐懼，還能幫助其他受驚嚇的狗狗。他的故事也常常被用來教育大眾關於負責任的寵物飼養。但是，又有多少狗狗能像小黑一樣幸運呢？</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p17.webp" alt="小黑成為示範犬">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block5c">
+                <div class="story-content">
+                    <p>退休獸醫用專業且溫柔的方式幫助小黑。她發現小黑對氣味特別敏感，於是設計了香氣治療計畫。透過精油和獎勵的配合，小黑逐漸放鬆下來。</p>
+                    <p>一年後，小黑完全康復，成為了獸醫診所的常駐狗狗，幫助安撫其他緊張的動物。他的存在證明了愛與心能治癒最深的傷痕。但是，又有多少狗狗能像小黑一樣幸運呢？</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p18.webp" alt="小黑在診所">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block5d">
+                <div class="story-content">
+                    <p>小黑被轉送到了鄉間的長期照護中心。這裡環境寬敞，有專業的照護人員，還有許多和小黑有類似經歷的狗狗。在這，沒有人會強迫小黑與人互動。</p>
+                    <p>雖然小黑可能永遠無法完全克服對人類的恐懼，但在這個安全的環境中，他找到了屬於自己的平靜。每天在大草地上奔跑，和其他狗狗玩耍，這樣的生活或許才是最適合他的選擇。但是，又有多少狗狗能像小黑一樣幸運呢？</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p19.webp" alt="小黑在長期照護中心">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block5e">
+                <div class="story-content">
+                    <p>老夫妻找到了一位住在附近的寵物保姆，她每天都會來幫忙照顧狗狗們。有了這份協助，老夫妻終於能夠安心地繼續照顧這個大家庭。保姆不僅幫忙餵食和散步，還會帶狗狗們去做定期健康檢查。</p>
+                    <p>小黑和其他兩隻狗在這個充滿愛的環境中安享晚年。老夫妻常說，有這些狗狗陪伴的生活讓他們覺得更有活力，這是最好的雙贏結局。但是，又有多少流浪狗能像小黑一樣幸運，找到願意為牠付出這麼多心力的家人呢？</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p14.webp" alt="小黑和寵物保姆">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block5f">
+                <div class="story-content">
+                    <p>老夫妻經過慎重考慮，決定為小黑尋找家。他們通過收容所的協助，找到了一個年輕的單身女子。她工作穩定，家裡只養一隻溫的老狗，非常期待能給小黑一個新家。</p>
+                    <p>在新主人的照顧下，小黑很快就適應了新環境。而老夫妻也常常來探望他，看到小黑過得好，他們也感到欣慰。這個決雖然不容易，但確實是對每個人都最好的安排。但是，又有多少狗狗跟小黑一樣好運呢？</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p15.webp" alt="小黑在新家">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block5g">
+                <div class="story-content">
+                    <p>年輕夫妻提前做好準備，請寵物行為專家來家裡指導。他們學會了如何幫助小黑適應即將到來的變化，包括播放嬰兒哭聲的錄音，讓小黑漸漸習慣。他們也重新安排了家具，確保小黑有自己的安全空間。</p>
+                    <p>當寶寶出生後，小黑表現得比預期還要好。他非常溫柔地對待小寶寶，成為了一個稱職的「狗哥哥」。這個家庭的故事，證明了只要有足夠的準備和耐心，人狗之間的溫馨共處是完全可能的。但是，又有多少家庭願意像他們一樣，為寵物付出這麼多的時間和心力呢？</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p12.webp" alt="小黑和寶寶">
+                </div>
+            </div>
+
+            <div class="story-block hidden" id="block5h">
+                <div class="story-content">
+                    <p>年輕夫妻最終還是決定將小黑送回收容所。雖然這個決定讓他們痛心，但他們相信這對小黑或許是更好的選擇，並期待他能找到一個更合適的家。他們細心寫下小黑的習性、飲食偏好及照顧心得，希望為他鋪設通往新生活的路。然而，收容所的現實卻冷酷無情。日復一日，小黑靜靜地躺在籠中，眼神中逐漸失去光彩。每當有人經過牠的籠子，牠會抬頭期待地望著，但迎接牠的只是一次又一次的擦肩而過。</p>
+                    <p>幾個月後，小黑的身體開始變得虛弱，毛色黯淡無光，骨瘦如柴。牠的狀況日益惡化，但在收容所資源有限的現實下，牠只能默默忍受病痛。某個寒冷的清晨，工作人員發現小黑已經奄奄一息，眼中映著最後一絲牽掛與不捨。終究，牠在冰冷的收容所裡無聲地走完了自己的一生，曾經那麼渴望愛的牠，最終卻在孤獨中消逝。</p>
+                    <div class="choice-buttons">
+                        <button onclick="restartStory()" class="restart-btn">再試一次</button>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="p20.webp" alt="小黑與新家人">
                 </div>
             </div>
         </div>
@@ -99,18 +326,41 @@
             background-color: var(--cornsilk);
             border-radius: 15px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 30px;
         }
 
         .story-content {
+            flex: 1;
             font-size: 1.2rem;
             line-height: 1.8;
+        }
+
+        .story-image {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .story-content p {
+            margin-bottom: 2em;
+        }
+
+        .story-content p:last-of-type {
+            margin-bottom: 1.5em;
         }
 
         .choice-buttons {
             margin-top: 30px;
             display: flex;
             gap: 20px;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .choice-buttons button {
@@ -131,74 +381,283 @@
         .hidden {
             display: none;
         }
+
+        @media (max-width: 768px) {
+            .story-block {
+                flex-direction: column;
+            }
+
+            .story-image {
+                width: 100%;
+            }
+
+            .choice-buttons {
+                flex-direction: column;
+            }
+        }
+
+        .choice-buttons button.disabled {
+            background-color: #ccc !important;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .choice-buttons button.disabled:hover {
+            background-color: #ccc !important;
+        }
+
+        .restart-btn.disabled {
+            background-color: #4a4a4a !important;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .restart-btn.disabled:hover {
+            background-color: #4a4a4a !important;
+        }
+
+        /* 修改翻卡片背面的文字對齊 */
+        .card-back {
+            background: var(--dark-moss-green);
+            color: var(--cornsilk);
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card-back h3 {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            padding: 0;
+            text-align: center;
+        }
+
+        .card-back p {
+            width: 100%;
+            padding: 0;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        /* 修改解決方案卡片的文字對齊 */
+        .solution-card {
+            background: var(--cornsilk);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .solution-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            display: block;
+        }
+
+        .solution-card h3 {
+            color: var(--pakistan-green);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .solution-card p {
+            color: var(--pakistan-green);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .solution-card .learn-more {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .title-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1::before,
+        .hero h1::after {
+            content: '"';
+            color: var(--earth-yellow);
+            font-size: 4.5rem;
+            position: relative;
+            top: 0.2rem;
+        }
+
+        .scroll-indicator {
+            margin-top: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator:hover {
+            color: var(--earth-yellow);
+        }
+
+        .scroll-arrow {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 
     <script>
         function showBlock(blockId) {
-            // 獲取要顯示的區塊
-            const blockToShow = document.getElementById(blockId);
+            // 獲取要複製的區塊模板
+            const blockTemplate = document.getElementById(blockId);
+            
+            // 創建的區塊
+            const newBlock = blockTemplate.cloneNode(true);
+            newBlock.id = blockId + '-clone-' + Date.now();
+            newBlock.classList.remove('hidden');
+            
+            // 停用當前點擊的按鈕
+            const clickedButton = event.target;
+            clickedButton.disabled = true;
+            clickedButton.classList.add('disabled');
 
-            // 如果區塊已經顯示過，則複製一份並添加到頁面底部
-            if (!blockToShow.classList.contains('hidden')) {
-                const clone = blockToShow.cloneNode(true);
-                clone.id = blockId + '-clone-' + Date.now(); // 確保ID唯一
-                document.querySelector('.interactive-story .container').appendChild(clone);
-                scrollToBlock(clone);
-            } else {
-                // 顯示選擇區塊
-                blockToShow.classList.remove('hidden');
-                scrollToBlock(blockToShow);
-            }
+            // 將新區塊添加到當前區塊之後
+            const currentBlock = clickedButton.closest('.story-block');
+            currentBlock.after(newBlock);
+            
+            // 滾動到新區塊
+            scrollToBlock(newBlock);
         }
 
         function scrollToBlock(block) {
-            // 計算區塊應該滾動到的位置
             const offset = window.innerHeight * 0.1;
             const blockPosition = block.getBoundingClientRect().top + window.scrollY - offset;
 
-            // 滑順滾動到指定位置
             window.scrollTo({
                 top: blockPosition,
                 behavior: 'smooth'
             });
         }
+
+        function restartStory() {
+            // 直接顯示第一個區塊的複製版本
+            const firstBlock = document.getElementById('block1');
+            const clone = firstBlock.cloneNode(true);
+            clone.id = 'block1-clone-' + Date.now();
+            clone.classList.remove('hidden');
+            
+            // 停用當前點擊的重新開始按鈕
+            const clickedButton = event.target;
+            clickedButton.disabled = true;
+            clickedButton.classList.add('disabled');
+            
+            // 確保複製的區塊中的按鈕是可點擊的
+            const clonedButtons = clone.querySelectorAll('button');
+            clonedButtons.forEach(button => {
+                button.disabled = false;
+                button.classList.remove('disabled');
+            });
+            
+            // 將新區塊添加到當前區塊之後
+            const currentBlock = clickedButton.closest('.story-block');
+            currentBlock.after(clone);
+            
+            scrollToBlock(clone);
+        }
+
+        function scrollToNextSection() {
+            const introSection = document.querySelector('.intro');
+            const headerOffset = 80;
+            const elementPosition = introSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     </script>
+
+    <!-- 報導內容區塊 -->
+    <section class="article">
+        <div class="container">
+            <h2>深入探討</h2>
+            
+            <article class="article-content">
+                <div class="article-section">
+                    <h3>必須共存的現實</h3>
+                    <p>流浪動物問題隨著城市化和人口增長愈加明顯，牠們的存無法完全消除，同時全面驅逐也違背動物福利的基本原則。因此，如何在保護人類生活品質的前提下，找到人類與流浪動物和平共處的方式，成為一重課題。</p>
+                    <p>社會對這些動物的態度不一，部分人同情流浪動物並願意餵養，另一部分人則視之為問題。這樣的分歧讓社區在面對流浪動物時難以達成共識，迫切需要多方協作，共同尋求一種人道而有效的共存模式。</p>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <!-- 衝突議題視覺呈現 -->
     <section class="issues">
         <div class="container">
-            <h2>當前困境</h2>
+            <h2>長期累積的挑戰</h2>
+            <div class="section-intro">
+                <p>隨著都市化發展與人口密度增加，流浪動物在社區中的存在帶來了日益嚴峻的挑戰。這些問題不僅涉及公共安全與衛生，更延伸至環境保護和社區和諧等多個層面，形成一個複雜的社會議題。</p>
+                <p>這些長期累積的問題已經超越了單純的動物福利範疇，演變成一個需要社會各界共同關注和解決的系統性挑戰。從公共安全到生態平衡，從社區衛生到居民關係，每一個面向都緊密相連，需要我們以更全面的視角來思和處理。</p>
+            </div>
             <div class="issue-cards">
                 <div class="card" onclick="this.classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="https://via.placeholder.com/300x200" alt="收容所空間不足">
+                            <img src="issue-1.jpg" alt="公共安全風險">
+                            <h3>公共安全風險</h3>
                         </div>
                         <div class="card-back">
-                            <h3>收容所超收</h3>
-                            <p>公立收容所面臨空間不足問題</p>
+                            <h3>公共安全風險</h3>
+                            <p>流浪犬等動物在覓食或自衛時可能具攻擊性，威脅行人或兒童安全。收容所超收問題更加劇了這個情況。</p>
                         </div>
                     </div>
                 </div>
                 <div class="card" onclick="this.classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="https://via.placeholder.com/300x200" alt="棄養問題">
+                            <img src="issue-2.jpg" alt="公共衛生隱患">
+                            <h3>公共衛生隱患</h3>
                         </div>
                         <div class="card-back">
-                            <h3>任意棄養</h3>
-                            <p>寵物棄養情況持續攀升</p>
+                            <h3>公共衛生隱患</h3>
+                            <p>流浪動物攜帶人畜共通疾病與寄生蟲，對社區衛生構成潛在威脅。醫療資源不足更使問題惡化。</p>
                         </div>
                     </div>
                 </div>
                 <div class="card" onclick="this.classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="https://via.placeholder.com/300x200" alt="資源不足">
+                            <img src="issue-3.jpg" alt="環境生態影響">
+                            <h3>環境生態影響</h3>
                         </div>
                         <div class="card-back">
-                            <h3>資源不足</h3>
-                            <p>醫療及照護資源嚴重缺乏</p>
+                            <h3>環境生態影響</h3>
+                            <p>流浪動物不僅造成環境汙染，還可能破壞本地生態平衡，影響都市生物多樣性。</p>
                         </div>
                     </div>
                 </div>
@@ -206,11 +665,423 @@
         </div>
     </section>
 
-    <!-- CTA區塊 -->
+    <!-- 修改 solutions 區塊，加入引言段落 -->
+    <section class="solutions">
+        <div class="container">
+            <h2>解決方案</h2>
+            <div class="section-intro">
+                <p>雖然流浪動物問題阻力重重，但仍有一些可行方案可以逐步緩解。透過加強飼主教育，推廣寵物登記與絕育觀念，減少無計劃繁殖和棄養行為，形成更負責的飼養文化。同時，政府和民間應共同增強資源配置，為收容所提供更多支持，並推進TNR等減量計畫。</p>
+                <p>這些解決方案需要長期的努力和各方的配合。從教育宣導到法規執行，從資源配置到公眾參與，每個環節都環環相扣。只有透過系統性的改革和持續的投入，才能真正改善流浪動物的處境，建立起人與動物諧共處的社會環境。</p>
+            </div>
+            <div class="solution-cards">
+                <div class="solution-card">
+                    <div class="icon">📚</div>
+                    <h3>教育宣導</h3>
+                    <p>推廣寵物登記與絕育觀念，減少無計劃的繁殖和棄養行為。</p>
+                    <a href="#" class="learn-more">了解更多</a>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">💰</div>
+                    <h3>資源配置</h3>
+                    <p>政府及公益組投入更多資源，強化收容所的持能力。</p>
+                    <a href="#" class="learn-more">了解更多</a>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">🤝</div>
+                    <h3>公眾參與</h3>
+                    <p>提供志工服務和捐助機會，讓更多人參與動物保護行列。</p>
+                    <a href="#" class="learn-more">了解更多</a>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">⚖️</div>
+                    <h3>法規執行</h3>
+                    <p>推動更嚴格的法規並強化執行，防止棄養行為，保障動物福利。</p>
+                    <a href="#" class="learn-more">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 修改測驗區塊的結構 -->
+    <section class="quiz">
+        <div class="container">
+            <h2>知識測驗</h2>
+            <div class="section-intro">
+                <p>讓我們透過以下問題，檢視對流浪動物議題的理解程度。請依序回答問題，完成測驗後可以查看學習成果。</p>
+            </div>
+            
+            <div class="quiz-container">
+                <div class="quiz-question active" id="q1">
+                    <h3>1. 根據報導內容，台灣目前的流浪動物問題有什麼特點？</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q1" value="wrong" onchange="handleAnswer(1)">
+                            <span>數量穩定但分布不均</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="wrong" onchange="handleAnswer(1)">
+                            <span>數量逐年下降</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="correct" onchange="handleAnswer(1)">
+                            <span>數量持續增長，年度送養量遠低於成長速度</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="wrong" onchange="handleAnswer(1)">
+                            <span>送養量與成長量持平</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 在第一個問題之後加入其他問題 -->
+                <div class="quiz-question" id="q2">
+                    <h3>2. 下列哪項不是流浪動物造成的主要環境問題？</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q2" value="wrong" onchange="handleAnswer(2)">
+                            <span>翻找垃圾，造成環境污染</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="wrong" onchange="handleAnswer(2)">
+                            <span>影響本地生態平衡</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="correct" onchange="handleAnswer(2)">
+                            <span>增加空氣污染</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="wrong" onchange="handleAnswer(2)">
+                            <span>影響社區環境衛生</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz-question" id="q3">
+                    <h3>3. 解決流浪動物問題時，最關鍵的長期解決方案是什麼？</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q3" value="wrong" onchange="handleAnswer(3)">
+                            <span>增加收容所數量</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="correct" onchange="handleAnswer(3)">
+                            <span>加強飼主教育，推廣寵物絕育觀念</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="wrong" onchange="handleAnswer(3)">
+                            <span>提高收容所人力配置</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz-question" id="q4">
+                    <h3>4. TNR政策在執行時遇到什麼主要阻礙？</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q4" value="wrong" onchange="handleAnswer(4)">
+                            <span>缺乏執行技術</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="wrong" onchange="handleAnswer(4)">
+                            <span>動物抗拒捕捉</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="correct" onchange="handleAnswer(4)">
+                            <span>面臨倫理爭議和輿論反對</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz-question" id="q5">
+                    <h3>5. 以下哪個不是有效的公眾參與方式？</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q5" value="wrong" onchange="handleAnswer(5)">
+                            <span>支持收容所</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="wrong" onchange="handleAnswer(5)">
+                            <span>參與志工服務</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="wrong" onchange="handleAnswer(5)">
+                            <span>提供資金援助</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="correct" onchange="handleAnswer(5)">
+                            <span>私自餵養流浪動物</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button id="submit-quiz" class="quiz-submit hidden">查看得分</button>
+                <div id="quiz-result" class="quiz-result hidden">
+                    <h3>測驗結果</h3>
+                    <p>您的得分：<span id="score">0</span> 分</p>
+                    <p>等級：<span id="grade">-</span></p>
+                    <p id="feedback"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 修改測驗相關的樣式 -->
+    <style>
+    .quiz {
+        padding: 80px 0;
+        background-color: white;
+    }
+
+    .quiz-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .quiz-question {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background-color: var(--cornsilk);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+
+    .quiz-question.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .quiz-question h3 {
+        color: var(--pakistan-green);
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--earth-yellow);
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: white;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .option:hover {
+        border-color: var(--earth-yellow);
+        background-color: var(--cornsilk);
+    }
+
+    .option input[type="radio"] {
+        margin-right: 15px;
+        width: 20px;
+        height: 20px;
+        accent-color: var(--tigers-eye);
+    }
+
+    .option span {
+        color: var(--pakistan-green);
+        font-size: 1.1rem;
+    }
+
+    .quiz-submit {
+        display: block;
+        width: 200px;
+        margin: 40px auto;
+        padding: 15px 30px;
+        background-color: var(--tigers-eye);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.3s;
+    }
+
+    .quiz-submit:hover {
+        background-color: var(--earth-yellow);
+    }
+
+    .quiz-result {
+        text-align: center;
+        padding: 30px;
+        background-color: var(--cornsilk);
+        border-radius: 15px;
+        margin-top: 30px;
+        border: 2px solid var(--earth-yellow);
+    }
+
+    .quiz-result.hidden {
+        display: none;
+    }
+
+    .quiz-result h3 {
+        color: var(--pakistan-green);
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    #grade {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--tigers-eye);
+        display: block;
+        margin: 15px 0;
+    }
+
+    #score {
+        font-size: 1.2rem;
+        color: var(--pakistan-green);
+        font-weight: bold;
+    }
+
+    #feedback {
+        margin-top: 20px;
+        color: var(--pakistan-green);
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        .quiz-question {
+            padding: 20px;
+        }
+        
+        .option {
+            padding: 12px;
+        }
+        
+        .option span {
+            font-size: 1rem;
+        }
+    }
+    </style>
+
+    <!-- 修改測驗相關的 JavaScript -->
+    <script>
+    let currentQuestion = 1;
+    const totalQuestions = 5;
+    let answeredQuestions = new Set();
+
+    function handleAnswer(questionNumber) {
+        // 記錄已回答的問題
+        answeredQuestions.add(questionNumber);
+        
+        // 如果還有下一題，顯示下一題（不隱藏當前題目）
+        if (questionNumber < totalQuestions) {
+            // 顯示下一題
+            const nextQuestionElement = document.getElementById('q' + (questionNumber + 1));
+            nextQuestionElement.classList.add('active');
+            
+            // 滾動到新問題
+            setTimeout(() => {
+                nextQuestionElement.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }, 300);
+        }
+        
+        // 檢查是否所有��題都已回答
+        if (answeredQuestions.size === totalQuestions) {
+            // 顯示提交按鈕
+            const submitButton = document.getElementById('submit-quiz');
+            submitButton.classList.remove('hidden');
+            
+            // 滾動到提交按鈕
+            setTimeout(() => {
+                submitButton.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }, 300);
+        }
+    }
+
+    // 確保頁面載入時提交按鈕是隱藏的
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('submit-quiz').classList.add('hidden');
+    });
+    </script>
+
+    <!-- 修改相關的 CSS -->
+    <style>
+    .quiz-submit.hidden {
+        display: none !important;
+    }
+    </style>
+
+    <!-- 在最後的 script 標籤中加入計分相關的程式碼 -->
+    <script>
+    document.getElementById('submit-quiz').addEventListener('click', function() {
+        let score = 0;
+        const totalQuestions = 5;
+        
+        // 計算分數
+        for (let i = 1; i <= totalQuestions; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === 'correct') {
+                score++;
+            }
+        }
+        
+        // 計算百分比
+        const percentage = (score / totalQuestions) * 100;
+        
+        // 決定等級
+        let grade;
+        if (percentage === 100) {
+            grade = 'A+';
+        } else if (percentage >= 90) {
+            grade = 'A';
+        } else if (percentage >= 80) {
+            grade = 'B';
+        } else if (percentage >= 70) {
+            grade = 'C';
+        } else if (percentage >= 60) {
+            grade = 'D';
+        } else {
+            grade = 'E';
+        }
+        
+        // 顯示結果
+        document.getElementById('score').textContent = `${score}/${totalQuestions}`;
+        document.getElementById('grade').textContent = grade;
+        
+        // 根據得分給出反饋
+        let feedback;
+        if (percentage >= 80) {
+            feedback = '太棒了！您對流浪動物議題有很深的理解！';
+        } else if (percentage >= 60) {
+            feedback = '不錯的表現！還有一些細節可以再加強。';
+        } else {
+            feedback = '建議您重新閱讀文章，加深對議題的理。';
+        }
+        document.getElementById('feedback').textContent = feedback;
+        
+        // 顯示結果區塊
+        document.getElementById('quiz-result').classList.remove('hidden');
+        
+        // 滾動到結果區域
+        document.getElementById('quiz-result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    </script>
+
+    <!-- 移動到最後的 CTA 區塊，並修改標題顏色 -->
     <section class="cta">
         <div class="container">
-            <h2>一起行動</h2>
-            <p>每一生命都值得被善待</p>
+            <h2 style="color:#fff!important">一起行動</h2>
+            <p>每一個生命都值得被善待</p>
             <div class="cta-buttons">
                 <a href="#" class="btn primary">認養資訊</a>
                 <a href="#" class="btn secondary">捐款支持</a>
