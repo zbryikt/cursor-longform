@@ -84,6 +84,7 @@ body {
 /* 議區塊樣式 */
 .issues {
     padding: 80px 0;
+    background-color: var(--cornsilk);
 }
 
 .issue-cards {
@@ -159,6 +160,18 @@ body {
     border: 2px solid var(--dark-moss-green);
 }
 
+.card-front h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
 /* CTA區塊樣式 */
 .cta {
     padding: 80px 0;
@@ -200,7 +213,7 @@ body {
     border-color: var(--earth-yellow);
 }
 
-/* 響應式設計 */
+/* 響應設計 */
 @media (max-width: 768px) {
     .stats-grid,
     .issue-cards {
@@ -231,4 +244,191 @@ h2::after {
 
 .cta h2::after {
     background-color: var(--earth-yellow);
+}
+
+/* 報導內容區塊樣式 */
+.article {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-section {
+    margin-bottom: 60px;
+}
+
+.article-section h3 {
+    color: var(--pakistan-green);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.article-section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.challenge-list {
+    list-style: none;
+    padding: 0;
+}
+
+.challenge-list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--cornsilk);
+    border-radius: 8px;
+    border-left: 4px solid var(--tigers-eye);
+}
+
+.challenge-list strong {
+    color: var(--tigers-eye);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.solution-item {
+    background-color: var(--cornsilk);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.solution-item h4 {
+    color: var(--tigers-eye);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* 響應式設計補充 */
+@media (max-width: 768px) {
+    .solution-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .challenge-list li {
+        padding: 12px;
+    }
+}
+
+/* 解決方案區塊樣式 */
+.solutions {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.solution-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.solution-card {
+    background: var(--cornsilk);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+}
+
+.solution-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.solution-card h3 {
+    color: var(--pakistan-green);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.solution-card p {
+    color: var(--pakistan-green);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--tigers-eye);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: var(--earth-yellow);
+}
+
+/* 響應式設計補充 */
+@media (max-width: 1024px) {
+    .solution-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .solution-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .solution-card {
+        padding: 20px;
+    }
+}
+
+/* 在 issues 區塊樣式中加入 */
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: left;
+    color: var(--pakistan-green);
+}
+
+.section-intro p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.section-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* 在 intro 區塊樣式中加入 */
+.section-outro {
+    max-width: 800px;
+    margin: 40px auto 0;
+    text-align: center;
+    color: var(--pakistan-green);
+    font-style: italic;
+}
+
+.section-outro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
 } 
