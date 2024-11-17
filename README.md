@@ -1,6 +1,6 @@
 # 流浪動物數位專題 / 使用 Cursor + ChatGPT生成
 
-DEMO: [https://zbryikt.github.io/course-longform](https://zbryikt.github.io/course-longform)
+DEMO: [https://zbryikt.github.io/cursor-longform](https://zbryikt.github.io/cursor-longform)
 
 ## 專案簡介
 
